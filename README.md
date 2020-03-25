@@ -12,7 +12,7 @@ Problems I have to look out for are:
 - The link build up (Ends with: "20200324-sitrep-64-covid-19.pdf". Important is to look out for the "20200324"(date) and "64"(number of report))
 
 ## Version 1.0
-The basics are set up. That means downloading and reading the data. I also created to functions to sort the data from low to high and from high to low.
+The basics are set up. That means downloading and reading the data. I also created to functions to sort the data from low to high and from high to low. Added example-file-65.pdf to show what kind of PDF it is.
 
 ### Setup
 To use these scripts you need the following modules installed:
