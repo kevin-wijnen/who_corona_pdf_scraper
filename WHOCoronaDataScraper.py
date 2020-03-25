@@ -7,7 +7,7 @@ link = 'https://www.who.int/docs/default-source/coronaviruse/situation-reports/{
 
 firstDate = datetime.strptime("21-1-2020", "%d-%m-%Y").date() # Date of first publication
 
-countries=[f.name for f in pycountry.countries] # List of all countries found in pycountry
+countries=[f.name for f in pycountry.countries] # List of all countries in pycountry
 
 
 def prepare_WHO_grabberdata(date): # Takes a date and gives a formatted date en number back to use in the link
@@ -63,10 +63,25 @@ def get_latest_WHO_Data():
             if splitpage[x] in countries:
                 datarow = {}
                 datarow['country'] = splitpage[x]
-                datarow['total confirmed cases'] = int(splitpage[x+2])
-                datarow['total confirmed new cases'] = int(splitpage[x+4])
-                datarow['total deaths'] = int(splitpage[x+6])
-                datarow['total new deaths'] = int(splitpage[x+8])
+                if splitpage[x+2] != ' ':
+                    datarow['total confirmed cases'] = int(splitpage[x+2])
+                else:
+                    datarow['total confirmed cases'] = int(splitpage[x+3])
+
+                if splitpage[x+4] != ' ':
+                    datarow['total confirmed new cases'] = int(splitpage[x+4])
+                else:
+                    datarow['total confirmed new cases'] = int(splitpage[x+5])
+
+                if splitpage[x+6] != ' ':
+                    datarow['total deaths'] = int(splitpage[x+6])
+                else:
+                    datarow['total deaths'] = int(splitpage[x+7])
+
+                if splitpage[x+8] != ' ':
+                    datarow['total new deaths'] = int(splitpage[x+8])
+                else:
+                    datarow['total new deaths'] = int(splitpage[x+9])
                 data.append(datarow)
     pdfFileObj.close()
     print('Done')
