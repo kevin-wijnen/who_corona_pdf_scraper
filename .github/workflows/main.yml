@@ -25,9 +25,3 @@ jobs:
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Starting CI!
-    
-    # Discord notifier
-    - name: Actions for Discord
-      env:
-        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-      uses: Ilshidur/action-discord@0.0.2
