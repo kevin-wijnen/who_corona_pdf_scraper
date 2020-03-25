@@ -1,7 +1,7 @@
 # WHO Corona PDF Scraper
 My attempt to scrape data from the situation reports published daily by the World Health Organization.
 
-With this project I try to scrape data from the situation reports that are published by The World Health Organization. These reports are in PDF and contain a table with information about:
+With this project I try to scrape data from the situation reports that are published by the World Health Organization. These reports are in PDF and contain a table with information about:
 - Total confirmed cases
 - Total new cases
 - Total deaths
