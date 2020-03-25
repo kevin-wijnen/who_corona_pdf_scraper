@@ -7,7 +7,7 @@ link = 'https://www.who.int/docs/default-source/coronaviruse/situation-reports/{
 
 firstDate = datetime.strptime("21-1-2020", "%d-%m-%Y").date() # Date of first publication
 
-countries=[f.name for f in pycountry.countries] # List of all countries in pycountry
+countries=[f.name for f in pycountry.countries] # List of all countries found in pycountry
 
 
 def prepare_WHO_grabberdata(date): # Takes a date and gives a formatted date en number back to use in the link
