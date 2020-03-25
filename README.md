@@ -10,7 +10,7 @@ With this project I try to scrape data from the situation reports that are publi
 Problems I have to look out for are:
 - The fact that I am reading a PDF so reading a PDF in code brings characters with them
 - New countries appearing (These are marked red)
-- The link build up (End with: "20200324-sitrep-64-covid-19.pdf". Important is to look out for the "20200324"(date) and "64"(number of report))
+- The link build up (Ends with: "20200324-sitrep-64-covid-19.pdf". Important is to look out for the "20200324"(date) and "64"(number of report))
 
 ## Version 1.0
 The basics are set up. That means downloading and reading the data. I also created to functions to sort the data from low to high and from high to low.
